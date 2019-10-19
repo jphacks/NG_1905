@@ -6,12 +6,18 @@
 <body>
 ああああああああああああああああああああ
     <?php $userid= $_POST["id"] ;
+    echo "もらったでーた".$userid ;
         $row = 1;
-        if (($handle = fopen("Dcsv.csv", "r")) !== FALSE) {
+        if (($handle = fopen("../DATABASE/ID.csv", "r")) !== FALSE) {
             // 1行ずつfgetcsv()関数を使って読み込む
             while (($data = fgetcsv($handle))) {
                 $row++;
+                foreach ($data as $value) {
+                    echo "「${value}」";
+                }
+                echo "<br>" ;
                 if($data[0] == $userid){
+                    echo "D0=".$data[0]." ID== ".$userid ; 
                     $username = $data[1] ;
                     echo "Ditechted" ;
                     break ;
