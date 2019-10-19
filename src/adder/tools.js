@@ -1,5 +1,9 @@
 //汎用的な関数を置く場所
-
+function a() {
+  $(document).ready(function () {
+      $(".headC").show(2000);
+  });
+};
 /**
  * classNameで指定したclassをドラッグ可能にする
  */
@@ -75,3 +79,4 @@ function haveClassinClass(className,baseClassName){
   console.log("false");
   return false;
 }
+
