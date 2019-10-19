@@ -20,7 +20,7 @@
                     if($data[1] == $userpassword){
                         echo "SUCCSEESS"  ;
                         
-                        echo "<form name=\"IDPW\" action=\"../main.php\" method=\"post\">\" " ;
+                        echo "<form name=\"IDPW\" action=\"../Main/main.php\" method=\"post\">\" " ;
                             echo "<input type=\"text\" name=\"id\" hidden value=\"".$userid."\">" ;
                         echo "</form>" ;
                         echo "<script>" ;

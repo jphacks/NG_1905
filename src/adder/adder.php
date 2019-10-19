@@ -81,5 +81,8 @@
     </div>
   </div><!--form-->
   </div>
+<div class="gotoMain">
+  <a href="../Main/main.php">メインページへ</a>
+</div>
 </body>
 </html>
