@@ -8,20 +8,38 @@ function drag(className){
 }
 
 function drop(){
+  var x;
+  var y;
   $('.hobby-submitbox').droppable({
+    active:function(e,ui){
+      x = 0;
+      y = 0;
+    },
     over: function(e,ui) {
       $(this)
         .find("h3")
         .css("color","white");
+      $(ui.draggable)
+        .css("color","blue");
     },
     out: function(e,ui) {
       $(this)
         .find("h3")
         .css("color","black");
+      $(ui.draggable)
+        .css("color","blue")
+    },
+    deactive: function(e,ui){
+      $(ui.draggable)
+        .css("color","black")
+        .css("top",y)
+        .css("left",x);
     },
     drop: function(e,ui) {
-      $(this)
-        return true;
+      $(ui.draggable)
+        .css("color","black")
+        .css("top",y)
+        .css("left",x);
     }
   });
 }

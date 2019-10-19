@@ -58,15 +58,26 @@
     <div class="hobby-box">
     <!--趣味パネルを設定-->
       <?php foreach($hobbies as $hobby) : ?>
-        <div class="<?php echo $hobby?>" id="hobby">
+        <div class=<?php echo $hobby?> id="hobby">
           <p><?php echo $hobby?></p>
           <script>drag("<?php echo $hobby?>")</script>
         </div>
       <?php endforeach ?>
     </div>
     <div class="hobby-submitbox">
-      <script>drop();</script>
+      <script>
+      if(drop() == true){
+
+      }
+      </script>
       <h3>ここにパネルを置いてください</h3>
+    </div>
+    <div class="hobby-shows">
+      <ul>
+        <?php foreach($userHobbies as $hobby) :?>
+          <li> <?php echo $hobby ?> </li>
+        <?php endforeach?>
+      </ul>
     </div>
   </div><!--form-->
   </div>
