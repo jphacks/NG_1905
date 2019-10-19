@@ -5,13 +5,12 @@
 </head>
 <body>
     <?php 
-    $userid= $_POST["id"] ;
+    $userid= $_POST["userid"] ;
     $userpassword = $_POST["password"] ;
 
         echo "もらったでーた".$userid." &  ".$userpassword ;
         if (($handle = fopen("../../DATABASE/ID.csv", "r")) !== FALSE) {
             while (($data = fgetcsv($handle))) {
-                $row++;
                 foreach ($data as $value) {
                     echo "「${value}」";
                 }
@@ -21,7 +20,7 @@
                         echo "SUCCSEESS"  ;
                         
                         echo "<form name=\"IDPW\" action=\"../Main/main.php\" method=\"post\">\" " ;
-                            echo "<input type=\"text\" name=\"id\" hidden value=\"".$userid."\">" ;
+                            echo "<input type=\"text\" name=\"userid\" hidden value=\"".$userid."\">" ;
                         echo "</form>" ;
                         echo "<script>" ;
                             echo "document.IDPW.submit();" ;

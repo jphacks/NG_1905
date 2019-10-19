@@ -10,7 +10,7 @@
     </div>
 </head>
 <body>
-    <?php $userid= $_POST["id"] ;
+    <?php $userid= $_POST["userid"] ;
         $row = 1;
         if (($handle = fopen("../../DATABASE/ID.csv", "r")) !== FALSE) {
             while (($data = fgetcsv($handle))) {
@@ -34,7 +34,19 @@
     <div class="container">
         <div class="Right">
             <p>こっち右側</p>
-        </div>
+            <br>
+            <?php echo "<form method=\"post\" name=\"toAdd\" action=\"../adder/adder.php\"><input type=\"text\" name=\"userid\" hidden value=\"".$userid."\"><input class=\"button\" type=\"submit\" value=\"登録画面はこちらっ\"></form>" ;   ?> 
+            <br>
+
+            <div class="status">
+                <h2>Your Status</h2>
+                <h3>ID: <?php echo $userid ?></h3>
+            </div>
+            
+
+            
+            ああああ      
+         </div>
 
         <div class="Left">こっち左側
             <br>
