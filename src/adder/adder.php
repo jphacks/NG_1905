@@ -91,7 +91,7 @@
     </div>
     <div class="hobby-submitbox">
       <script>drop();</script>
-      <p>ここにパネルを置いてください</p>
+      <p id="HDbox">ここにパネルを置いてください</p>
     </div>
   </div><!--form-->
   </div>
