@@ -5,11 +5,13 @@
     <title>Login form</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="main.js"></script>
 </head>
     <body>
-        <div class="container">
+        <!-- <div class="container">
             <div class="newF">
                 <form action="Signed.php" method="post">
 
@@ -19,6 +21,27 @@
                     <input type="submit" value="送信！！">
                 </form>
             </div>
-        </div>
+        </div> -->
+        <div>
+                <form class="form-horizontal" action="Signed.php" method="post">
+                    <div class="form-group">
+                        <label for="inputEmail3" class="col-sm-2 control-label">Your ID</label>
+                        <div class="col-sm-10">
+                        <input type="text" class="form-control" id="inputEmail3" placeholder="ID" name="userid">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputPassword3" class="col-sm-2 control-label">Password</label>
+                        <div class="col-sm-10">
+                        <input type="password" class="form-control" id="inputPassword3" placeholder="Password" name="password">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-offset-2 col-sm-10">
+                        <button type="submit" class="btn btn-primary">Sign up</button>
+                        </div>
+                    </div>
+                    </form>
+                </div>
     </body>
 </html>
