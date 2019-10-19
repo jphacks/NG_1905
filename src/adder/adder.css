@@ -32,6 +32,7 @@ body{
 }
 
 #hobby{
+  margin: 5px;
   color : blue;
   border: 1px solid black;
 }

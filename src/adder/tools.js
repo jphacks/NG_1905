@@ -37,15 +37,6 @@ function drop(){
       $(ui.draggable)
         .css("color","blue");
     },
-    drop: function(e,ui) {
-<<<<<<< HEAD
-=======
-      $(ui.draggable)
-        .css("color","black")
-        .css("top",y) 
-        .css("left",x);
-        console.log("x=="+x+"y=="+y+" ");
->>>>>>> 7d26025a98309c82504a628d112ec927dce953c8
-    }
+    drop: function(e,ui) {}
   });
 }
