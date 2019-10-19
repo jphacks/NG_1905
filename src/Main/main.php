@@ -27,8 +27,8 @@
     ?>
 
 <div class="hello">
-    <h1>ようこそ<?php echo $username ?>さん,ID=<?php echo $userid ?></h1>
-    <a href="../../index.html">go to INDEX </a>
+    <h3>ようこそ<?php echo $username ?>さん,ID=<?php echo $userid ?></h3>
+
 </div>
 
     <div class="container">
@@ -45,7 +45,7 @@
                         if($data[0] == $userid){
                             echo "<div class=\"dfield\"> " ;
                             echo "<a href=\"../viewer/viewer.php?userid=".$userid."&targetname=".$data[1]."\">".$data[1]."</a> " ;
-
+                            echo "</div>" ;
                         }
                         echo "<br>" ;
                     }
@@ -58,7 +58,7 @@
 
         </div>
     </div>
-
+    <a href="../../index.html">go to INDEX </a>
 
 </body>
 </html>
