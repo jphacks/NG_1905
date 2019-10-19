@@ -25,6 +25,7 @@
             fclose($handle);
         }
     ?>
+
 <div class="hello">
     <h1>ようこそ<?php echo $username ?>さん,ID=<?php echo $userid ?></h1>
     <a href="../../index.html">go to INDEX </a>
@@ -37,6 +38,24 @@
 
         <div class="Left">こっち左側
             <br>
+            <div class="downfield">
+                <?php
+                if (($handle = fopen("../../DATABASE/DATA.csv", "r")) !== FALSE) {
+                    while (($data = fgetcsv($handle))) {
+                        if($data[0] == $userid){
+                            echo "<div class=\"dfield\"> " ;
+                            echo "<a href=\"../viewer/viewer.php?userid=".$userid."&targetname=".$data[1]."\">".$data[1]."</a> " ;
+
+                        }
+                        echo "<br>" ;
+                    }
+                fclose($handle);
+                }
+                ?>
+            </div>
+                
+
+
         </div>
     </div>
 
