@@ -1,5 +1,5 @@
-function a() {
+function a(){
   $(document).ready(function () {
-      $(".headC-view").show(2000);
+      $(".headC").show(2000);
   });
 };
