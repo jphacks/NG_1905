@@ -1,0 +1,11 @@
+.head{
+  height : 80px;
+  padding : 1px ;
+  margin-left: auto;
+  margin-right: auto;
+  background-color : rgb(99, 214, 64);
+}
+
+.headC{
+  display: none;
+}

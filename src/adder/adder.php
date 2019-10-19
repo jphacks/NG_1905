@@ -8,6 +8,7 @@
   <meta charset="UTF-8">
   <title>Adder</title>
   <link rel="stylesheet" href="adder.css">
+  <link rel="stylesheet" href="../../header.css">
   <script src="tools.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.js"></script>
@@ -17,7 +18,8 @@
   <!--ヘッダー-->
   <div class="adder-page">
     <div class="head">
-      <h1>WEB_NAME</h1>
+      <script>a();</script>
+      <h1 class="headC">WEB_NAME</h1>
     </div>
     <div class="title">
       <h2>入力フォーム</h2>
