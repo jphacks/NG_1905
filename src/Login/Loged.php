@@ -41,7 +41,7 @@
     <div class="Cwrite">
         <p>こちらの内容で書き込みました。</p>
         <?php print_r($pData) ?>
-        <form action="../main.php" method="post">
+        <form action="../Main/main.php" method="post">
             <p><input type="text" name="id" value="<?php echo $pData[0] ?>"></p>
             <input type="submit" value="メインページへ">
         </form>

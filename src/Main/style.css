@@ -1,0 +1,41 @@
+.header{
+//background-color : #00ff05;
+    width: 600px ;
+    height:150px ;
+    padding : 1px ;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.header .headsC{
+    font-size: 100px;
+    text-align: center;
+    display: none;
+}
+
+body{
+    background-color: aliceblue;
+}
+
+.container{
+    width: 900px;
+    hight: 700px;
+    display: flex;
+
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    text-align: center;
+    background-color: #00ff05;
+}
+
+.Right{
+    width: 50%;
+    background-color : #21c4ed ;
+
+}
+
+.Left{
+    width: 50%;
+    background-color : deeppink;
+}
