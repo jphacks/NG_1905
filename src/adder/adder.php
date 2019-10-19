@@ -17,7 +17,14 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.js"></script>
-  <?php $userid= $_POST["userid"] ; ?>
+  <?php 
+  if (!isset($_POST['userid'])){
+    $userid = "testid" ;
+  }else{
+    $userid= $_POST["userid"] ; 
+  }
+  
+  ?>
 </head>
 <body>
   <!--ヘッダー-->
@@ -36,7 +43,8 @@
     <div class="form-base">
     <h2>基本情報</h2>
       <!--基本情報-->
-      <form action="XXXXXXXXXXXXXXXXXXXx" name="f" onsubmit="return selcheck()" method="POST" class="form-group">
+      <form action="adderC.php" name="f" onsubmit="return selcheck()" method="POST" class="form-group">
+      <input type="text" name="userid" hidden class="userid form-control" value="<?php echo $userid ?>">
         <dl>
           <dt>
             <span class="required name-head">名前</span>
@@ -46,10 +54,10 @@
             <input type="text" name="name" class="name form-control" required>
           </dd>
           <dt>
-            <span class="required email-head">メールアドレス</span>
+            <span class="required home-head">出身地</span>
           </dt>
           <dd>
-            <input type="email" name="email" class="email form-control" required>
+            <input type="text" name="home" class="home form-control" required>
           </dd>
           <dt>
             <span class="tel-head">電話番号</span>
