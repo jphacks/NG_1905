@@ -38,8 +38,9 @@ function drop(){
     drop: function(e,ui) {
       $(ui.draggable)
         .css("color","black")
-        .css("top",y)
+        .css("top",y) 
         .css("left",x);
+        console.log("x=="+x+"y=="+y+" ");
     }
   });
 }
