@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-    <title>メインページ</title>
+    <title>ログインに成功してでしょうか</title>
 </head>
 <body>
-ああああああああああああああああああああ
-    <?php $userid= $_POST["id"] ;
-    echo "もらったでーた".$userid ;
-        $row = 1;
+    <?php 
+    $userid= $_POST["id"] ;
+    $userpassword = $_POST["password"] ;
+
+        echo "もらったでーた".$userid." &  ".$userpassword ;
         if (($handle = fopen("../DATABASE/ID.csv", "r")) !== FALSE) {
             while (($data = fgetcsv($handle))) {
                 $row++;
@@ -16,18 +17,16 @@
                 }
                 echo "<br>" ;
                 if($data[0] == $userid){
-                    echo "D0=".$data[0]." ID== ".$userid ; 
-                    $username = $data[2] ;
-                    echo "Ditechted" ;
+                    if($data[1] == $userpassword){
+                        echo "SUCCSEESS"  ;
+                    }
                     break ;
                 }
                 echo "Not Detected" ;
             }
             fclose($handle);
         }
-    ?>
-<div class="hello">
-    <h1>ようこそ<?php echo $username ?>さん,ID=<?php echo $userid ?></h1>
+        ?>
 
 </div>
 </body>
