@@ -8,7 +8,7 @@
   <meta charset="UTF-8">
   <title>Adder</title>
   <link rel="stylesheet" href="adder.css">
-  <script src="../tools.js"></script>
+  <script src="tools.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<script src="https://code.jquery.com/ui/1.12.0/jquery-ui.js"></script>
 </head>
@@ -17,6 +17,9 @@
   <div class="adder-page">
     <div class="head">
       <h1>WEB_NAME</h1>
+    </div>
+    <div class="title">
+      <h2>入力フォーム</h2>
     </div>
     <div class="form">
     <div class="form-base">
@@ -55,13 +58,14 @@
     <div class="hobby-box">
     <!--趣味パネルを設定-->
       <?php foreach($hobbies as $hobby) : ?>
-        <div class="<?php echo $hobby?>">
+        <div class="<?php echo $hobby?>" id="hobby">
           <p><?php echo $hobby?></p>
           <script>drag("<?php echo $hobby?>")</script>
         </div>
       <?php endforeach ?>
     </div>
     <div class="hobby-submitbox">
+      <script>drop();</script>
       <h3>ここにパネルを置いてください</h3>
     </div>
   </div><!--form-->

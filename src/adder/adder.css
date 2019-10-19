@@ -11,20 +11,26 @@ body{
 }
 
 .form>.form-base{
-  width:50%;
   border : 1px solid black;
   float: left;
 }
 
-.form>.hobby-box,.form>.hobby-sub{
-  width:40%;
+.form>.hobby-box,.form>.hobby-submitbox{
+  width:49%;
   border : 1px solid black;
-  float: right;
+  float: left;
 }
 
 .form:after{
   content: "";
   display: block;
   clear : both;
+}
+
+#hobby{
+  width : 40px;
+  height : 40px;
+  color : blue;
+  border: 1px solid black;
 }
 
