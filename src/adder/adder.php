@@ -68,8 +68,9 @@
     <!--趣味パネルを設定-->
     <?php $i = 0 ?>
       <?php foreach($hobbies as $hobby) : ?>
-        <div class=<?php echo $hobby?> id="hobby">
+        <div class="<?php echo $hobby?>"  id="hobby" name=<?php $key++ ?>>
           <p><?php echo $hobby?></p>
+          <?php echo $key ?>
           <script>drag("<?php echo $hobby?>")</script>
           <?php if($i % 25 == 24) : ?>
             <div class="floatClear"></div>
@@ -83,12 +84,15 @@
       <h3>ここにパネルを置いてください</h3>
     </div>
     <div class="hobby-shows">
-      <ul>
+      <!-- <ul>
       <?php foreach($hobbies as $hobby) : ?>
-      <div class="<?php echo $hobby?>">
+      <div class="<?php echo $hobby?>-a">
         <li></li>
       </div>
       <?php endforeach ?>
+      </ul> -->
+      <ul id="uls">
+      <li></li>
       </ul>
     </div>
   </div><!--form-->
