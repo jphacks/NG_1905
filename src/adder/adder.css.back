@@ -3,13 +3,22 @@ body{
   padding: 0;
 }
 .form{
-  margin-left: 200px;
+  /*margin-left: auto;
   margin-right: auto;
+  padding-left: auto;
+  padding-right: auto;*/
+  background-color: brown;
+}
+.container{
+  margin-left: auto;
+  margin-right: auto;
+  background-color: aqua;
+  display : flex;
 }
 
 .title{
   position: absolut;
-  margin-left: 200px;
+  margin-left: auto;
 }
 
 .head{
@@ -22,19 +31,22 @@ body{
 }
 
 .form>.hobby-box,.form>.hobby-submitbox,.form>.hobby-shows{
-  margin-left : 100px;
   /*width:49%;*/
   float: left;
 }
 
 .hobby-box{
+  margin-left: auto;
+  margin-right: auto;
   display : block;
+  background-color: rgb(174, 175, 175);
+
 }
 
 .form:after{
-  content: "";
+  /*content: "";
   display: block;
-  clear : both;
+  clear : both;*/
 }
 
 #hobby{
@@ -44,6 +56,7 @@ body{
   color : blue;
   border: 1px solid black;
   float: left;
+  background-color: chartreuse;
 }
 
 #hobby[class*="canPublish"]{
