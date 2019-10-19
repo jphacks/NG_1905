@@ -3,21 +3,27 @@ body{
   padding: 0;
 }
 .form{
-  border : 1px solid black;
+  margin-left: 200px;
+  margin-right: auto;
+}
+
+.title{
+  position: absolut;
+  margin-left: 200px;
 }
 
 .head{
-  border: 1px solid black;
 }
 
 .form>.form-base{
-  border : 1px solid black;
+  padding :5px;
   float: left;
+  background-color : rgb(99, 214, 64);
 }
 
 .form>.hobby-box,.form>.hobby-submitbox,.form>.hobby-shows{
-  width:49%;
-  border : 1px solid black;
+  margin-left : 100px;
+  /*width:49%;*/
   float: left;
 }
 
@@ -32,12 +38,21 @@ body{
 }
 
 #hobby{
+  width : 100px;
+  height : 100px;
   margin: 5px;
   color : blue;
   border: 1px solid black;
+  float: left;
 }
 
 #hobby[class*="canPublish"]{
   color : red;
+}
+
+.floatClear:after{
+  content: "";
+  display: block;
+  clear : both;
 }
 
