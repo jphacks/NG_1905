@@ -12,7 +12,7 @@
         )
         ?>
 <?php
-        $fp = fopen("../", "a");
+        $fp = fopen("../../DATABASE/ID.csv", "a");
 
         fputcsv($fp, $pData);
 
@@ -41,7 +41,10 @@
     <div class="Cwrite">
         <p>こちらの内容で書き込みました。</p>
         <?php print_r($pData) ?>
-        <p><a href="../main.html">トップへ</a></p>
+        <form action="../main.php" method="post">
+            <p><input type="text" name="id" value="<?php echo $pData[0] ?>"></p>
+            <input type="submit" value="メインページへ">
+        </form>
     </div>
 
 </div>
