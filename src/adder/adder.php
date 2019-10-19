@@ -58,9 +58,12 @@
     <!--趣味のパネルを置く場所-->
     <div class="hobby-box">
     <!--趣味パネルを設定-->
+    <?php $key = 0 ;?>
       <?php foreach($hobbies as $hobby) : ?>
-        <div class=<?php echo $hobby?> id="hobby">
+      
+        <div class="<?php echo $hobby?>"  id="hobby" name=<?php $key++ ?>>
           <p><?php echo $hobby?></p>
+          <?php echo $key ?>
           <script>drag("<?php echo $hobby?>")</script>
         </div>
       <?php endforeach ?>
@@ -70,12 +73,15 @@
       <h3>ここにパネルを置いてください</h3>
     </div>
     <div class="hobby-shows">
-      <ul>
+      <!-- <ul>
       <?php foreach($hobbies as $hobby) : ?>
-      <div class="<?php echo $hobby?>">
+      <div class="<?php echo $hobby?>-a">
         <li></li>
       </div>
       <?php endforeach ?>
+      </ul> -->
+      <ul id="uls">
+      <li></li>
       </ul>
     </div>
   </div><!--form-->

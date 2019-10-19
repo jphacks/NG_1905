@@ -7,15 +7,28 @@ function drag(className){
   $('.'+className).draggable();
 }
 
+function CCC(CL){
+  $("."+CL+"-a").css("background-color","red");
+  $("ul").append("<li>"+CL+"</li>")
+
+}
+
 function drop(){
   var x = 0;
   var y = 0;
+  var Dnow ;
   $("html").droppable({
     deactive: function(e,ui){
       $(ui.draggable)
         .css("top",0)
         .css("left",0)
         .css("color","blue");
+    },
+    activate: function(e,ui){
+      Dnow = $(this) ;
+      console.dir(Dnow);
+      $(ui.draggable)
+        .css("color","red");
     },
     drop: function(e,ui) {
       $(ui.draggable)
@@ -44,7 +57,11 @@ function drop(){
         .addClass("canPublish");
       $(".hobby-shows")
         .find("li")
-        .html("ok");
+      //  .html("ok");
+        console.log("Class="+$(".canPublish").className+" . ;"+Dnow+"aa");
+        var CLS = ui.draggable.attr('class');
+        var CL = CLS[0] ;
+        CCC(CL);
     }
   });
 }
