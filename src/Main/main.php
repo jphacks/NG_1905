@@ -47,16 +47,6 @@
             
             ああああ      
          </div>
-         <?php
-  $hobbySports = array();
-  if (($handle = fopen("Sports.txt", "r")) !== FALSE) {
-    while (($data = fgetcsv($handle))) {
-      $hobbySports[] = $data ;
-      echo $data ;
-    }
-  }
-  fclose($handle);
-?>
 
         <div class="Left">こっち左側
             <br>
