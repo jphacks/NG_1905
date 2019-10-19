@@ -6,7 +6,7 @@
 <body>
 <?php
         $pData = array(
-        $_POST["id"] ,
+        $_POST["userid"] ,
         $_POST["password"] ,
         $_POST["username"] ,
         )
@@ -26,7 +26,7 @@
     <h1>登録情報</h1>
     <div class="name-confirm">
         <h3>Your ID</h3>
-        <?php echo $_POST["id"]; ?>
+        <?php echo $_POST["userid"]; ?>
     </div>
     <div class="password-confirm">
         <h3>Your PASSWORD</h3>
@@ -42,7 +42,7 @@
         <p>こちらの内容で書き込みました。</p>
         <?php print_r($pData) ?>
         <form action="../Main/main.php" method="post">
-            <p><input type="text" name="id" value="<?php echo $pData[0] ?>"></p>
+            <p><input type="text" name="userid" value="<?php echo $pData[0] ?>"></p>
             <input type="submit" value="メインページへ">
         </form>
     </div>

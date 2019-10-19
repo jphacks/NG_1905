@@ -10,7 +10,8 @@
   <link rel="stylesheet" href="adder.css">
   <script src="tools.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-	<script src="https://code.jquery.com/ui/1.12.0/jquery-ui.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.js"></script>
+  <?php $userid= $_POST["userid"] ; ?>
 </head>
 <body>
   <!--ヘッダー-->
@@ -24,7 +25,7 @@
     <div class="form">
     <div class="form-base">
       <!--基本情報-->
-      <form action="http://masacccch.php.xdomain.jp/confirm.php" name="f" onsubmit="return selcheck()" method="POST">
+      <form action="XXXXXXXXXXXXXXXXXXXx" name="f" onsubmit="return selcheck()" method="POST">
         <dl>
           <dt>
             <span class="required name-head">名前</span>
@@ -82,7 +83,7 @@
   </div><!--form-->
   </div>
 <div class="gotoMain">
-  <a href="../Main/main.php">メインページへ</a>
+<?php echo "<form method=\"post\" name=\"toM\" action=\"../Main/main.php\"><input type=\"text\" name=\"userid\" hidden value=\"".$userid."\"><input type=\"submit\" value=\"メインページへ\"></form>" ;   ?> 
 </div>
 </body>
 </html>
