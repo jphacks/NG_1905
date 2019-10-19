@@ -62,7 +62,6 @@ function drop(){
       $(".hobby-shows")
         .find("li")
       //  .html("ok");
-        console.log("Class="+$(".canPublish").className+" . ;"+Dnow+"aa");
         var CLS = ui.draggable.attr('class');
         var CL = CLS[0] ;
         CCC(CL);
