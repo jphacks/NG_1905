@@ -9,7 +9,7 @@
     $userpassword = $_POST["password"] ;
 
         echo "もらったでーた".$userid." &  ".$userpassword ;
-        if (($handle = fopen("../DATABASE/ID.csv", "r")) !== FALSE) {
+        if (($handle = fopen("../../DATABASE/ID.csv", "r")) !== FALSE) {
             while (($data = fgetcsv($handle))) {
                 $row++;
                 foreach ($data as $value) {
@@ -19,6 +19,13 @@
                 if($data[0] == $userid){
                     if($data[1] == $userpassword){
                         echo "SUCCSEESS"  ;
+                        
+                        echo "<form name=\"IDPW\" action=\"../main.php\" method=\"post\">\" " ;
+                            echo "<input type=\"text\" name=\"id\" hidden value=\"".$userid."\">" ;
+                        echo "</form>" ;
+                        echo "<script>" ;
+                            echo "document.IDPW.submit();" ;
+                        echo "</script>" ;
                     }
                     break ;
                 }

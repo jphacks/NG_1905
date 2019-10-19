@@ -28,7 +28,10 @@
     ?>
 <div class="hello">
     <h1>ようこそ<?php echo $username ?>さん,ID=<?php echo $userid ?></h1>
+    <a href="../index.html">go to INDEX </a>
 
 </div>
+
+
 </body>
 </html>
