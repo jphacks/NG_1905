@@ -8,8 +8,8 @@ function drag(className){
 }
 
 function drop(){
-  var x;
-  var y;
+  var x = 0;
+  var y = 0;
   $('.hobby-submitbox').droppable({
     active:function(e,ui){
       x = 0;
