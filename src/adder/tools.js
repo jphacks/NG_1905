@@ -62,9 +62,8 @@ function drop(){
       $(".hobby-shows")
         .find("li")
       //  .html("ok");
-        var CLS = ui.draggable.attr('class');
-        var CL = CLS[0] ;
-        CCC(CL);
+        var CLS = ui.draggable.attr('class').split(" ")[0];
+        CCC(CLS);
     }
   });
 }
