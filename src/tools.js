@@ -6,3 +6,7 @@
 function drag(className){
   $('.'+className).draggable();
 }
+
+function drop(){
+  
+}

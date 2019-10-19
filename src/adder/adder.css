@@ -1,0 +1,30 @@
+body{
+  margin: 0;
+  padding: 0;
+}
+.form{
+  border : 1px solid black;
+}
+
+.head{
+  border: 1px solid black;
+}
+
+.form>.form-base{
+  width:50%;
+  border : 1px solid black;
+  float: left;
+}
+
+.form>.hobby-box,.form>.hobby-sub{
+  width:40%;
+  border : 1px solid black;
+  float: right;
+}
+
+.form:after{
+  content: "";
+  display: block;
+  clear : both;
+}
+

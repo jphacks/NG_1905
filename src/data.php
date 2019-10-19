@@ -1,3 +1,3 @@
 <?php
-  $data = array("A","B","C");
+  $hobbies = array("A","B","C");
 ?>
