@@ -26,13 +26,15 @@
       <script>a();</script>
       <h1 class="headC">WEB_NAME</h1>
     </div>
-    <div class="container">
+    <div class="headContainer">
     <div class="title">
       <h2>入力フォーム</h2>
     </div>
-    <div class="form col-sum-5">
+    </div>
+    <div class="container">
+    <div class="form">
     <div class="form-base">
-      <h2>基本情報</h2>
+    <h2>基本情報</h2>
       <!--基本情報-->
       <form action="XXXXXXXXXXXXXXXXXXXx" name="f" onsubmit="return selcheck()" method="POST" class="form-group">
         <dl>
@@ -64,15 +66,23 @@
         <p>※「<span class="required"></span>」のついている項目は必須項目です。</p>
       </div>
     </div><!--form-base-->
+    <div class="hobby-shows">
+      <h3>趣味</h3>
+      <?php foreach($hobbies as $hobby) : ?>
+      <div class="<?php echo $hobby?>-a"></div>
+      <?php endforeach ?>
+      <ul id="uls">
+      </ul>
+    </div>
     <!--趣味のパネルを置く場所-->
-    <div class="hobby-box col-sm-6">
+    <div class="hobby-box">
     <!--趣味パネルを設定-->
     <?php $i = 0 ?>
       <?php foreach($hobbies as $hobby) : ?>
         <div class="<?php echo $hobby?>"  id="hobby">
           <p><?php echo $hobby?></p>
           <script>drag("<?php echo $hobby?>")</script>
-          <?php if($i % 25 == 24) : ?>
+          <?php if($i % 4 == 3) : ?>
             <div class="floatClear"></div>
           <?php endif ?>
         </div>
@@ -81,19 +91,7 @@
     </div>
     <div class="hobby-submitbox">
       <script>drop();</script>
-      <h3>ここにパネルを置いてください</h3>
-    </div>
-    <div class="hobby-shows">
-      <!-- <ul>
-      <?php foreach($hobbies as $hobby) : ?>
-      <div class="<?php echo $hobby?>-a">
-        <li></li>
-      </div>
-      <?php endforeach ?>
-      </ul> -->
-      <ul id="uls">
-      <li></li>
-      </ul>
+      <p>ここにパネルを置いてください</p>
     </div>
   </div><!--form-->
   </div>

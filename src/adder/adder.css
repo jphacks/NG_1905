@@ -49,7 +49,7 @@ body{
 
 .hobby-box{
   background-color: rgb(174, 175, 175);
-  width : 35%;
+  width : 30%;
   height : 100%;
 }
 
@@ -60,7 +60,7 @@ body{
 }
 
 .hobby-submitbox{
-  width : 5%;
+  width : 10%;
   height : 100%;
   background-color : rgb(99, 214, 64);
 }
