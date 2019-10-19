@@ -57,7 +57,7 @@ body{
 }
 
 .hobby-shows{
-  display : flex;
+  /* display : flex; */
   width : 20%;
   background-color: rgb(245, 241, 42);
 }

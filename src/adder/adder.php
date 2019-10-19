@@ -59,6 +59,10 @@
           <dd>
           <textarea name="message" id="message" cols="30" rows="10" class="form-control"></textarea>
           </dd>
+          <dt>
+            <span class="tel-head">趣味</span>
+          </dt>
+          <dd><input type="text" name="hobby" id="setHobby" class="hobby form-control" readonly value="set from Right"></dd>
         </dl>
         <input type="submit" class="form-control">
       </form>
@@ -73,6 +77,11 @@
       <?php endforeach ?>
       <ul id="uls">
       </ul>
+      <br><br>
+      <div>
+      <input type="button" value="この内容でセットする" onclick="setHobby()">
+</div>
+      
     </div>
     <!--趣味のパネルを置く場所-->
     <div class="hobby-box">

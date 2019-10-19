@@ -11,10 +11,13 @@ function drag(className){
   $('.'+className).draggable();
 }
 
+var hobbyarray = [] ;
+
 function CCC(CL){
   $("."+CL+"-a").css("background-color","red");
   $("ul").append("<li>"+CL+"</li>")
-
+  hobbyarray.push(CL);
+  console.log(hobbyarray);
 }
 
 function drop(){
@@ -66,6 +69,11 @@ function drop(){
         CCC(CLS);
     }
   });
+}
+
+function setHobby(){
+  console.log("CLICKED");
+  document.getElementById( "setHobby" ).value = hobbyarray ;
 }
 
 function haveClassinClass(className,baseClassName){
