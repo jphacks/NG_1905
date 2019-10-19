@@ -37,6 +37,24 @@ function drop(){
       $(ui.draggable)
         .css("color","blue");
     },
-    drop: function(e,ui) {}
+    drop: function(e,ui) {
+      console.log("drop");
+      $(ui.draggable)
+        .css("color","blue")
+        .addClass("canPublish");
+      $(".hobby-shows")
+        .find("li")
+        .html("ok");
+    }
   });
+}
+
+function haveClassinClass(className,baseClassName){
+  console.log("function start!");
+  if($("."+baseClassName).hasClass(className)){
+    console.log("true");
+    return true;
+  }
+  console.log("false");
+  return false;
 }

@@ -65,18 +65,16 @@
       <?php endforeach ?>
     </div>
     <div class="hobby-submitbox">
-      <script>
-      if(drop() == true){
-
-      }
-      </script>
+      <script>drop();</script>
       <h3>ここにパネルを置いてください</h3>
     </div>
     <div class="hobby-shows">
       <ul>
-        <?php foreach($userHobbies as $hobby) :?>
-          <li> <?php echo $hobby ?> </li>
-        <?php endforeach?>
+      <?php foreach($hobbies as $hobby) : ?>
+      <div class="<?php echo $hobby?>">
+        <li></li>
+      </div>
+      <?php endforeach ?>
       </ul>
     </div>
   </div><!--form-->
