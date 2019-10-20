@@ -50,9 +50,9 @@
 
     <div class="Cwrite">
         <p>こちらの内容で書き込みました。</p>
-        <?php print_r($pData) ?>
+        <!-- <?php print_r($pData) ?> -->
         <form action="../Main/main.php" method="post">
-            <p><input type="text" name="userid" value="<?php echo $pData[0] ?>"></p>
+            <p><input type="text" name="userid" hidden value="<?php echo $pData[0] ?>"></p>
             <input type="submit" value="メインページへ">
         </form>
     </div>
