@@ -38,6 +38,13 @@
             fputcsv($handle,$addData) ;
 
             fclose($handle);
+
+            echo "<form name=\"IDPW\" action=\"../Main/main.php\" method=\"post\">\" " ;
+            echo "<input type=\"text\" name=\"userid\" hidden value=\"".$userid."\">" ;
+        echo "</form>" ;
+        echo "<script>" ;
+            echo "document.IDPW.submit();" ;
+        echo "</script>" ;
         }
     ?>
 
