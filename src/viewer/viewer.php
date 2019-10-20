@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="../../header.css">
+  <link rel="stylesheet" href="viewer.css">
   <script src="viewer.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.js"></script>
@@ -15,7 +16,12 @@
   <script>a();</script>
   <h1 class="headC">WEB_NAME</h1>
 </div>
-<div class="container">
+  <div class="title-container">
+  <div class="title">
+    <h1>Viewer</h1>
+  </div>
+  </div>
+  <div class="container">
   <div class="base-viewer">
     <!--基本情報+趣味を表示-->
     <h2 class = "name">名前</h2>
@@ -23,7 +29,9 @@
     <h2 class = "tel">電話番号</h2>
     <h2 class = hobby>趣味</h2>
   </div>
-  <div class="selectform">
+  <div class="hobby-container">
+    <div class="selectform">
+    <h3>自分の趣味と相手の趣味からGoogle検索できます</h3>
     <form action="" name="f" method="POST">
       <dl>
         <dt>あなたの趣味</dt>
@@ -44,12 +52,12 @@
     </form>
   </div>
   <div class="web">
-    <h3>自分の趣味と相手の趣味からGoogle検索できます</h3>
     <form action="http://www.google.co.jp/search" method="get" target="_blank">
       <input type="hidden" name="q" value=""><!--valueで検索結果を変えられる-->
       <input type="submit" name="btng" value="検索">
       <input type="hidden" name="hl" value="ja">
     </form>
+  </div>
   </div>
 </div>
 </body>
