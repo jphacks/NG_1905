@@ -6,8 +6,32 @@ function a(){
 
 function selcheck() {
   //formのアドレスを参照
-  elementReference = document.f.type.selectedIndex;
-  sIndex = document.f.type.options[elementReference].value;
-  
-  return sIndex;
+  elementReference = document.getElementById("f");
+  sIndex = elementReference.radio1;
+  value = "";
+  for(i = 0; i < sIndex.length; i++){
+    if(sIndex[i].checked){
+      value = sIndex[i].value;
+    }
+  }
+  if( value == ""){
+    document.getElementById( "q" ).value = "";
+  }
+  else{
+    document.getElementById( "q" ).value = " "+value;
+  }
+
+}
+
+function selcheck2() {
+  //formのアドレスを参照
+  elementReference = document.getElementById("f");
+  sIndex = elementReference.radio2;
+  val = sIndex.value;
+  if( val == ""){
+    document.getElementById( "q" ).value += "";
+  }
+  else{
+    document.getElementById( "q" ).value += " "+val;
+  }
 }

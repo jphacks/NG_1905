@@ -88,13 +88,13 @@
 			<div class="hobby-container">
 				<div class="selectform">
 					<h3>自分の趣味と相手の趣味からGoogle検索できます</h3>
-					<form action="" name="f" method="POST">
+					<form action="" id="f" name="f" class="f" method="POST">
 						<dl>
 							<dt>あなたの趣味</dt>
 							<dd>
 								<!--ユーザーの趣味情報を選択できるようにする-->
                 <?php foreach($userhobby as $hobby) :?>
-                  <input type="radio"><?php echo "$hobby"?>
+                  <input type="radio" class="radio1" name="radio1" value=<?php echo $hobby?> onclick="selcheck()"><?php echo $hobby?>
                 <?php endforeach?>
                 <?php if(sizeof($userhobby) == 0) : ?>
                   <p>登録されていません</p>
@@ -104,7 +104,7 @@
 							<dd>
 								<!--viewerに登録された人の趣味情報を選択できるようにする-->
                 <?php foreach($targethobby as $hobby) :?>
-                  <input type="radio"><?php echo "$hobby"?>
+                  <input type="radio" class="radio2" name="radio2" value=<?php echo $hobby?> onclick="selcheck2()"><?php echo $hobby?>
                 <?php endforeach?>
                 <?php if(sizeof($targethobby) == 0) : ?>
                   <p>登録されていません</p>
@@ -115,7 +115,7 @@
 				</div>
 				<div class="web">
 					<form action="http://www.google.co.jp/search" method="get" target="_blank">
-						<input type="hidden" name="q" value="">
+						<input type="hidden" name="q" id="q" value="">
 						<!--valueで検索結果を変えられる-->
 						<input type="submit" name="btng" value="検索">
 						<input type="hidden" name="hl" value="ja">
