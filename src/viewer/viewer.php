@@ -31,10 +31,10 @@
               if($data[1] == $targetname){
                 $targethome = $data[2];
                 $targettel = $data[3];
-                $targetMessage = $data[4];
+                $targetmessage = $data[4];
                 $targethobby = array();
                 for($i = 0; $i < count($data) - 5; $i++){
-                  $viewHobby[] = $data[$i + 5];
+                  $targethobby[] = $data[$i + 5];
                 }
               }
             }
@@ -74,12 +74,12 @@
 				</p>
 				<h2 class = "tel">メモ</h2>
 				<p>
-					<?php echo $targetMessage?>
+					<?php echo $targetmessage?>
 				</p>
 				<h2 class = hobby>趣味</h2>
 				<p>
 					<?php 
-      foreach($viewHobby as $hobby){
+      foreach($targethobby as $hobby){
         echo "$hobby ";
       }
     ?>
@@ -93,16 +93,22 @@
 							<dt>あなたの趣味</dt>
 							<dd>
 								<!--ユーザーの趣味情報を選択できるようにする-->
-								<select name="type1" id="type1">
-									<option value="select">選択してください</option>
-								</select>
+                <?php foreach($userhobby as $hobby) :?>
+                  <input type="radio"><?php echo "$hobby"?>
+                <?php endforeach?>
+                <?php if(sizeof($userhobby) == 0) : ?>
+                  <p>登録されていません</p>
+                <?php endif?>
 							</dd>
 							<dt>〇〇さんの趣味</dt>
 							<dd>
 								<!--viewerに登録された人の趣味情報を選択できるようにする-->
-								<select name="type2" id="type2">
-									<option value="select">選択してください</option>
-								</select>
+                <?php foreach($targethobby as $hobby) :?>
+                  <input type="radio"><?php echo "$hobby"?>
+                <?php endforeach?>
+                <?php if(sizeof($targethobby) == 0) : ?>
+                  <p>登録されていません</p>
+                <?php endif?>
 							</dd>
 						</dl>
 					</form>
