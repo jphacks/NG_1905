@@ -96,7 +96,9 @@ $targethobbycopy = array_values($targethobbycopy);
         			echo "$hobby ";
       				}	
 					?>
-					<span class="badge">一致！</span>
+					<?php if(!empty($matchhobby)){
+						echo "<span class=\"badge\">一致！</span>" ;
+					} ?>
 					</p>
 					<?php 
       				foreach($targethobbycopy as $hobby){

@@ -35,19 +35,19 @@ require_once "../data.php";
 				<div class="form-group">
 					<label for="inputEmail3" class="col-sm-2 control-label">Your ID</label>
 					<div class="col-sm-10">
-						<input type="text" class="form-control" id="inputEmail3" placeholder="ID" name="userid">
+						<input type="text" class="form-control" id="inputEmail3" placeholder="ID" name="userid" required>
 					</div>
 				</div>
 				<div class="form-group">
 					<label for="inputPassword3" class="col-sm-2 control-label">Password</label>
 					<div class="col-sm-10">
-						<input type="password" class="form-control" id="inputPassword3" placeholder="Password" name="password">
+						<input type="password" class="form-control" id="inputPassword3" placeholder="Password" name="password" required>
 					</div>
 				</div>
 				<div class="form-group">
 					<label for="inputPassword3" class="col-sm-2 control-label">Your UserName</label>
 					<div class="col-sm-10">
-						<input type="text" class="form-control" id="inputtext3" placeholder="Enter your name" name="username">
+						<input type="text" class="form-control" id="inputtext3" placeholder="Enter your name" name="username" required>
 					</div>
 				</div>
 				<div class="form-group">
