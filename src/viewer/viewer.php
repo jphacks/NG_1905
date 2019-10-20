@@ -12,13 +12,13 @@
 		<script src="https://code.jquery.com/ui/1.12.0/jquery-ui.js"></script>
 		<title>Viewer</title>
 		<?php 
-//   if (!isset($_GET['userid'])){
-//     $userid = "testid" ;
-//     $targetname = "test1";
-//   }else{
-//     $userid= $_GET["userid"] ;
-//     $targetname = $_GET["targetname"];
-//   }
+  if (!isset($_GET['userid'])){
+    $userid = "testid" ;
+    $targetname = "test1";
+  }else{
+    $userid= $_GET["userid"] ;
+    $targetname = $_GET["targetname"];
+  }
   $handle2;
   if (($handle = fopen("../../DATABASE/ID.csv", "r+")) !== FALSE) {
     while (($data = fgetcsv($handle))) {
