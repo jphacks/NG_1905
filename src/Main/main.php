@@ -19,6 +19,7 @@
                 }
                 if($data[0] == $userid){
                     $username = $data[2] ;
+                    $userlevel = $data[3] ;
                     break ;
                 }
             }
@@ -41,11 +42,8 @@
             <div class="status">
                 <h2>Your Status</h2>
                 <h3>ID: <?php echo $userid ?></h3>
+                <h3>Level: <?php echo $userlevel ?></h3>
             </div>
-            
-
-            
-            ああああ      
          </div>
 
         <div class="Left">こっち左側

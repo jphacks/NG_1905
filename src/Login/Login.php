@@ -66,39 +66,40 @@ require_once "../data.php";
 			</form>
 		</div>
 		<!-- ////////////////////////////////////// -->
-		<div class="container">
-			<div class="hobby-shows">
-				<h3>趣味</h3>
-				<p>ここにドロップ</p>
-				<script>drop();</script>
-				<?php foreach ($hobbies as $hobby): ?>
-				<div class="<a5e5430a3cc295ffecfd1058abf414cd />-a"></div>
-				<?php endforeach?>
-				<ul id="uls"></ul>
-				<br>
-				<br>
-				<div>
-					<input type="button" value="この内容でセットする" onclick="setHobby()">
-				</div>
-			</div>
-			<!--趣味のパネルを置く場所-->
-			<div class="hobby-box">
-				<!--趣味パネルを設定-->
-				<?php $i = 0?>
-				<?php foreach ($hobbies as $hobby): ?>
-				<div class="<fd3ee9468a1be6aa1cee17096a731b57 />" id="hobby">
-					<p>
-						<?php echo $hobby ?>
-					</p>
-					<script>drag("<?php echo $hobby ?>")</script>
-					<?php if ($i % 4 == 3): ?>
-					<div class="floatClear"></div>
-					<?php endif?>
-				</div>
-				<?php $i++;?>
-				<?php endforeach?>
-			</div>
-		</div>
+<!-- ////////////////////////////////////// -->
+                    <div class="container">
+                    <div class="hobby-shows">
+                        <h3>趣味</h3>
+                        <p>ここにドロップ</p>
+                        <script>drop();</script>
+                        <?php foreach($hobbies as $hobby) : ?>
+                        <div class="<?php echo $hobby?>-a"></div>
+                        <?php endforeach ?>
+                        <ul id="uls">
+                        </ul>
+                        <br><br>
+                        <div>
+                        <input type="button" value="この内容でセットする" onclick="setHobby()">
+                  </div>
+                        
+                      </div>
+                      <!--趣味のパネルを置く場所-->
+                      <div class="hobby-box">
+                      <!--趣味パネルを設定-->
+                      <?php $i = 0 ?>
+                        <?php foreach($hobbies as $hobby) : ?>
+                          <div class="<?php echo $hobby?>"  id="hobby">
+                            <p><?php echo $hobby?></p>
+                            <script>drag("<?php echo $hobby?>")</script>
+                            <?php if($i % 4 == 3) : ?>
+                              <div class="floatClear"></div>
+                            <?php endif ?>
+                          </div>
+                          <?php $i++; ?>
+                        <?php endforeach ?>
+                      </div>
+                </div>
+<!-- ///////////////////////////////////////////////////////// -->
 		<!-- ///////////////////////////////////////////////////////// -->
 		<a href="../Main/main.php">メインページへ</a>
 	</body>
