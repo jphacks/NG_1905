@@ -9,9 +9,19 @@
         $_POST["userid"] ,
         $_POST["password"] ,
         $_POST["username"] ,
-        )
-        ?>
-<?php
+        1
+        ) ;
+        
+    $hobby=$_POST["hobby"] ;
+
+    $hobbyR = explode(',', $hobby);
+
+    foreach($hobbyR as  $value){
+         $pData[] = $value ;
+    }
+
+
+
         $fp = fopen("../../DATABASE/ID.csv", "a");
 
         fputcsv($fp, $pData);
