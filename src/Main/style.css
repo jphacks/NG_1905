@@ -107,3 +107,8 @@ body {
     width: 100%;
     /* background-color: rgb(235, 67, 67); */
 }
+
+.required:after{
+    content: " * ";
+    color: #ff0000;
+}

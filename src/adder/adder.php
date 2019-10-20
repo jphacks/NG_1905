@@ -65,18 +65,18 @@
           <dd><input type="tel" name="tel" class="tel form-control"></dd>
           <dt>メモ</dt>
           <dd>
-          <textarea name="message" id="message" cols="30" rows="10" class="form-control"></textarea>
+          <input type="text" name="message" class="message form-control">
           </dd>
           <dt>
-            <span class="tel-head">趣味</span>
+            <span class="tel-head">趣味(右から選択)</span>
           </dt>
-          <dd><input type="text" name="hobby" id="setHobby" class="hobby form-control" readonly value="set from Right"></dd>
+          <dd><input type="text" name="hobby" id="setHobby" class="hobby form-control" readonly></dd>
         </dl>
         <input type="submit" class="form-control">
       </form>
-      <div class="attention">
-        <p>※「<span class="required"></span>」のついている項目は必須項目です。</p>
-      </div>
+    <!-- <div class="attention"> -->
+        <!-- <p>※「<span class="required"></span>」のついている項目は必須項目です。</p> -->
+      <!-- </div> -->
     </div><!--form-base-->
     <div class="hobby-shows">
       <h3>趣味</h3>
