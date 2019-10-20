@@ -80,6 +80,8 @@
     </div><!--form-base-->
     <div class="hobby-shows">
       <h3>趣味</h3>
+      <p>ここにドロップ</p>
+      <script>drop();</script>
       <?php foreach($hobbies as $hobby) : ?>
       <div class="<?php echo $hobby?>-a"></div>
       <?php endforeach ?>
@@ -105,10 +107,6 @@
         </div>
         <?php $i++; ?>
       <?php endforeach ?>
-    </div>
-    <div class="hobby-submitbox">
-      <script>drop();</script>
-      <p id="HDbox">ここにパネルを置いてください</p>
     </div>
   </div><!--form-->
   </div>

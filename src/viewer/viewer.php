@@ -18,25 +18,26 @@
 <div class="container">
   <div class="base-viewer">
     <!--基本情報+趣味を表示-->
-    <p class = "name">名前</p>
-    <p class = "tel">電話番号</p>
-    <p class = hobby>趣味</p>
+    <h2 class = "name">名前</h2>
+    <h2 class = "tel">出身地</h2>
+    <h2 class = "tel">電話番号</h2>
+    <h2 class = hobby>趣味</h2>
   </div>
   <div class="selectform">
-    <form action="">
+    <form action="" name="f" method="POST">
       <dl>
         <dt>あなたの趣味</dt>
         <dd>
           <!--ユーザーの趣味情報を選択できるようにする-->
-          <select name="" id="">
-
+          <select name="type1" id="type1">
+            <option value="select">選択してください</option>
           </select>
         </dd>
         <dt>〇〇さんの趣味</dt>
         <dd>
           <!--viewerに登録された人の趣味情報を選択できるようにする-->
-          <select name="" id="">
-
+          <select name="type2" id="type2">
+            <option value="select">選択してください</option>
           </select>
         </dd>
       </dl>
