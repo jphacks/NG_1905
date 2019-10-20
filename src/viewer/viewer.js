@@ -1,6 +1,12 @@
 function a(){
   $(document).ready(function () {
       $(".headC").show(2000);
+      for(i = 0; i < sIndex.length; i++){
+        sIndex[i].checked = false;
+    }
+      for(i = 0; i < sIndex2.length; i++){
+        sIndex2[i].checked = false;
+      }
   });
 };
 
@@ -21,11 +27,6 @@ function selcheck() {
   else{
     document.getElementById( "q" ).value = " "+value;
   }
-  for(i = 0; i < sIndex.length; i++){
-    if(sIndex[i].checked){
-      sIndex[i].checked == false;
-    }
-  }
 }
 
 function selcheck2() {
@@ -45,9 +46,5 @@ function selcheck2() {
   else{
     document.getElementById( "q" ).value += " "+val;
   }
-  for(i = 0; i < sIndex2.length; i++){
-    if(sIndex2[i].checked){
-      sIndex2[i].checked == false;
-    }
-  }
+
 }
