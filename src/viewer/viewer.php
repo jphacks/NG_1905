@@ -7,6 +7,7 @@
 		<link rel="stylesheet" href="../../header.css">
 		<link rel="stylesheet" href="viewer.css">
 		<script src="viewer.js"></script>
+			<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 		<script src="https://code.jquery.com/ui/1.12.0/jquery-ui.js"></script>
 		<title>Viewer</title>
@@ -19,7 +20,7 @@
     $targetname = $_GET["targetname"];
   }
   $handle2;
-  if (($handle = fopen("../../DATABASE/ID.csv", "r")) !== FALSE) {
+  if (($handle = fopen("../../DATABASE/ID.csv", "r+")) !== FALSE) {
     while (($data = fgetcsv($handle))) {
       if($data[0] == $userid){
           $userhobby = array();
@@ -95,6 +96,7 @@ $targethobbycopy = array_values($targethobbycopy);
         			echo "$hobby ";
       				}	
 					?>
+					<span class="badge">一致！</span>
 					</p>
 					<?php 
       				foreach($targethobbycopy as $hobby){
