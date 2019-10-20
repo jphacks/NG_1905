@@ -23,8 +23,8 @@
     while (($data = fgetcsv($handle))) {
       if($data[0] == $userid){
           $userhobby = array();
-          for($i = 0; $i < count($data) - 3; $i++){
-            $userhobby[] = data[$i + 4];
+          for($i = 0; $i < count($data) - 4; $i++){
+            $userhobby[] = $data[$i + 4];
           }
           if (($handle2 = fopen("../../DATABASE/DATA.csv", "r")) !== FALSE) {
             while (($data = fgetcsv($handle2))) {
@@ -38,12 +38,12 @@
                 }
               }
             }
-          }
+					}
+					fclose($handle2);
           break ;
       }
     }
     fclose($handle);
-    fclose($handle2);
 }
 ?>
 	</head>
