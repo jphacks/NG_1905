@@ -34,7 +34,6 @@
 
     <div class="container">
         <div class="Right">
-            <p>こっち右側</p>
             <br>
             <?php echo "<form method=\"post\" name=\"toAdd\" action=\"../adder/adder.php\"><input type=\"text\" name=\"userid\" hidden value=\"".$userid."\"><input class=\"button\" type=\"submit\" value=\"登録画面はこちらっ\"></form>" ;   ?> 
             <br>
@@ -42,11 +41,11 @@
             <div class="status">
                 <h2>Your Status</h2>
                 <h3>ID: <?php echo $userid ?></h3>
-                <h3>Level: <?php echo $userlevel ?></h3>
+                <!-- <h3>Level: <?php echo $userlevel ?></h3> -->
             </div>
          </div>
 
-        <div class="Left">こっち左側
+        <div class="Left">
             <br>
             <div class="downfield">
                 <?php
@@ -57,7 +56,6 @@
                             echo "<a href=\"../viewer/viewer.php?userid=".$userid."&targetname=".$data[1]."\">".$data[1]."</a> " ;
                             echo "</div>" ;
                         }
-                        echo "<br>" ;
                     }
                 fclose($handle);
                 }

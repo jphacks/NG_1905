@@ -7,6 +7,7 @@
 		<link rel="stylesheet" href="../../header.css">
 		<link rel="stylesheet" href="viewer.css">
 		<script src="viewer.js"></script>
+			<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 		<script src="https://code.jquery.com/ui/1.12.0/jquery-ui.js"></script>
 		<title>Viewer</title>
@@ -19,7 +20,7 @@
     $targetname = $_GET["targetname"];
   }
   $handle2;
-  if (($handle = fopen("../../DATABASE/ID.csv", "r")) !== FALSE) {
+  if (($handle = fopen("../../DATABASE/ID.csv", "r+")) !== FALSE) {
     while (($data = fgetcsv($handle))) {
       if($data[0] == $userid){
           $userhobby = array();
@@ -45,6 +46,18 @@
     }
     fclose($handle);
 }
+$matchhobby = [] ;
+foreach($userhobby as $uval){
+	foreach($targethobby as $tval){
+		if($uval == $tval){
+			$matchhobby[] = $uval ;
+		}
+	}
+}
+
+$targethobbycopy = array_diff($targethobby,$matchhobby);
+$targethobbycopy = array_values($targethobbycopy);
+
 ?>
 	</head>
 	<body>
@@ -77,12 +90,19 @@
 					<?php echo $targetmessage?>
 				</p>
 				<h2 class = hobby>趣味</h2>
-				<p>
+				<p><p class="match">
 					<?php 
-      foreach($targethobby as $hobby){
-        echo "$hobby ";
-      }
-    ?>
+      				foreach($matchhobby as $hobby){
+        			echo "$hobby ";
+      				}	
+					?>
+					<span class="badge">一致！</span>
+					</p>
+					<?php 
+      				foreach($targethobbycopy as $hobby){
+        			echo "$hobby ";
+      				}	
+    				?>
 				</p>
 			</div>
 			<div class="hobby-container">
@@ -93,22 +113,42 @@
 							<dt>あなたの趣味</dt>
 							<dd>
 								<!--ユーザーの趣味情報を選択できるようにする-->
+<<<<<<< HEAD
                 <?php foreach($userhobby as $hobby) :?>
                   <input type="radio" class="radio1" name="radio1" value=<?php echo $hobby?> onclick="selcheck()"><?php echo $hobby?>
                 <?php endforeach?>
                 <?php if(sizeof($userhobby) == 0) : ?>
                   <p>登録されていません</p>
                 <?php endif?>
+=======
+								<?php foreach($userhobby as $hobby) :?>
+								<input type="radio">
+								<?php echo "$hobby"?>
+								<?php endforeach?>
+								<?php if(sizeof($userhobby) == 0) : ?>
+								<p>登録されていません</p>
+								<?php endif?>
+>>>>>>> 4a0742a4b57e0f842c67a14bfd04e604ab14c35a
 							</dd>
 							<dt>〇〇さんの趣味</dt>
 							<dd>
 								<!--viewerに登録された人の趣味情報を選択できるようにする-->
+<<<<<<< HEAD
                 <?php foreach($targethobby as $hobby) :?>
                   <input type="radio" class="radio2" name="radio2" value=<?php echo $hobby?> onclick="selcheck2()"><?php echo $hobby?>
                 <?php endforeach?>
                 <?php if(sizeof($targethobby) == 0) : ?>
                   <p>登録されていません</p>
                 <?php endif?>
+=======
+								<?php foreach($targethobby as $hobby) :?>
+								<input type="radio">
+								<?php echo "$hobby"?>
+								<?php endforeach?>
+								<?php if(sizeof($targethobby) == 0) : ?>
+								<p>登録されていません</p>
+								<?php endif?>
+>>>>>>> 4a0742a4b57e0f842c67a14bfd04e604ab14c35a
 							</dd>
 						</dl>
 					</form>
@@ -123,5 +163,7 @@
 				</div>
 			</div>
 		</div>
+		<?php echo "<form method=\"post\" name=\"toM\" action=\"../Main/main.php\"><input type=\"text\" name=\"userid\" hidden value=\"".$userid."\"><input type=\"submit\" value=\"メインページへ\"></form>" ;   ?> 
+
 	</body>
 </html>

@@ -1,27 +1,38 @@
-body{
-  margin : 0;
-  padding: 0;
+body {
+    margin: 0;
+    padding: 0;
 }
 
-.container{
-  margin-left : auto;
-  margin-right: auto;
-  display : flex;
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    padding-left: 10%;
+    padding-right: 10%;
 }
 
-.title-container{
-  margin-left : auto;
-  margin-right: auto;
-  display : flex;
+.title-container {
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
 }
 
-.title{
-  margin-left : auto;
-  margin-right: auto;
+.title {
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.base-viewer,.hobby-container{
-  margin-left : auto;
-  margin-right: auto;
+.base-viewer,
+.hobby-container {
+    margin-left: auto;
+    margin-right: auto;
 }
 
+.match {
+    background-color: hotpink;
+}
+
+.headC {
+    margin-left: auto;
+    margin-right: auto;
+}
