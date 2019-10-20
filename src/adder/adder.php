@@ -18,11 +18,11 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.js"></script>
   <?php 
-  if (!isset($_POST['userid'])){
-    $userid = "testid" ;
-  }else{
-    $userid= $_POST["userid"] ; 
-  }
+  // if (!isset($_POST['userid'])){
+  //   $userid = "testid" ;
+  // }else{
+  //   $userid= $_POST["userid"] ; 
+  // }
   
   ?>
 </head>
