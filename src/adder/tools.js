@@ -44,7 +44,7 @@ function drop(){
         .css("color","blue");
     }
   });
-  $('.hobby-submitbox').droppable({
+  $('.hobby-shows').droppable({
     over: function(e,ui) {
       $(ui.draggable)
         .css("color","blue");

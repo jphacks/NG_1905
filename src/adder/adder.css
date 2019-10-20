@@ -51,7 +51,7 @@ body{
 
 .hobby-box{
   background-color: rgb(174, 175, 175);
-  width : 30%;
+  width : 40%;
   height : 1000px;
   text-align: center;
 }
@@ -60,12 +60,6 @@ body{
   /* display : flex; */
   width : 20%;
   background-color: rgb(245, 241, 42);
-}
-
-.hobby-submitbox{
-  width : 10%;
-  height : 100%;
-  background-color : rgb(99, 214, 64);
 }
 
 .floatClear:after{
