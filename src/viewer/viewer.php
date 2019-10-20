@@ -45,6 +45,18 @@
     }
     fclose($handle);
 }
+$matchhobby = [] ;
+foreach($userhobby as $uval){
+	foreach($targethobby as $tval){
+		if($uval == $tval){
+			$matchhobby[] = $uval ;
+		}
+	}
+}
+
+$targethobbycopy = array_diff($targethobby,$matchhobby);
+$targethobbycopy = array_values($targethobbycopy);
+
 ?>
 	</head>
 	<body>
@@ -77,12 +89,18 @@
 					<?php echo $targetmessage?>
 				</p>
 				<h2 class = hobby>趣味</h2>
-				<p>
+				<p><p class="match">
 					<?php 
-      foreach($targethobby as $hobby){
-        echo "$hobby ";
-      }
-    ?>
+      				foreach($matchhobby as $hobby){
+        			echo "$hobby ";
+      				}	
+					?>
+					</p>
+					<?php 
+      				foreach($targethobbycopy as $hobby){
+        			echo "$hobby ";
+      				}	
+    				?>
 				</p>
 			</div>
 			<div class="hobby-container">
@@ -93,22 +111,24 @@
 							<dt>あなたの趣味</dt>
 							<dd>
 								<!--ユーザーの趣味情報を選択できるようにする-->
-                <?php foreach($userhobby as $hobby) :?>
-                  <input type="radio"><?php echo "$hobby"?>
-                <?php endforeach?>
-                <?php if(sizeof($userhobby) == 0) : ?>
-                  <p>登録されていません</p>
-                <?php endif?>
+								<?php foreach($userhobby as $hobby) :?>
+								<input type="radio">
+								<?php echo "$hobby"?>
+								<?php endforeach?>
+								<?php if(sizeof($userhobby) == 0) : ?>
+								<p>登録されていません</p>
+								<?php endif?>
 							</dd>
 							<dt>〇〇さんの趣味</dt>
 							<dd>
 								<!--viewerに登録された人の趣味情報を選択できるようにする-->
-                <?php foreach($targethobby as $hobby) :?>
-                  <input type="radio"><?php echo "$hobby"?>
-                <?php endforeach?>
-                <?php if(sizeof($targethobby) == 0) : ?>
-                  <p>登録されていません</p>
-                <?php endif?>
+								<?php foreach($targethobby as $hobby) :?>
+								<input type="radio">
+								<?php echo "$hobby"?>
+								<?php endforeach?>
+								<?php if(sizeof($targethobby) == 0) : ?>
+								<p>登録されていません</p>
+								<?php endif?>
 							</dd>
 						</dl>
 					</form>
@@ -123,5 +143,7 @@
 				</div>
 			</div>
 		</div>
+		<?php echo "<form method=\"post\" name=\"toM\" action=\"../Main/main.php\"><input type=\"text\" name=\"userid\" hidden value=\"".$userid."\"><input type=\"submit\" value=\"メインページへ\"></form>" ;   ?> 
+
 	</body>
 </html>
