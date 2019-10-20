@@ -31,7 +31,7 @@
   <div class="adder-page">
     <div class="head">
       <script>a();</script>
-      <h1 class="headC">WEB_NAME</h1>
+      <h1 class="headC">べんりなれんらくちょう</h1>
     </div>
     <div class="headContainer">
     <div class="title">

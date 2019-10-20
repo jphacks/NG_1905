@@ -63,7 +63,7 @@ $targethobbycopy = array_values($targethobbycopy);
 	<body>
 		<div class="head">
 			<script>a();</script>
-			<h1 class="headC">WEB_NAME</h1>
+			<h1 class="headC">べんりなれんらくちょう</h1>
 		</div>
 		<div class="title-container">
 			<div class="title">
