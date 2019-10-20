@@ -122,7 +122,7 @@ $targethobbycopy = array_values($targethobbycopy);
                   <p>登録されていません</p>
                 <?php endif?>
 							</dd>
-							<dt>〇〇さんの趣味</dt>
+							<dt><?php echo $targetname?>の趣味</dt>
 							<dd>
 								<!--viewerに登録された人の趣味情報を選択できるようにする-->
                 <?php foreach($targethobby as $hobby) :?>
