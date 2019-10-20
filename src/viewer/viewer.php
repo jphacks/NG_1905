@@ -14,7 +14,7 @@
 		<?php 
   if (!isset($_GET['userid'])){
     $userid = "testid" ;
-    $targetname = "NameSSS";
+    $targetname = "test1";
   }else{
     $userid= $_GET["userid"] ;
     $targetname = $_GET["targetname"];
@@ -113,42 +113,22 @@ $targethobbycopy = array_values($targethobbycopy);
 							<dt>あなたの趣味</dt>
 							<dd>
 								<!--ユーザーの趣味情報を選択できるようにする-->
-<<<<<<< HEAD
                 <?php foreach($userhobby as $hobby) :?>
                   <input type="radio" class="radio1" name="radio1" value=<?php echo $hobby?> onclick="selcheck()"><?php echo $hobby?>
                 <?php endforeach?>
                 <?php if(sizeof($userhobby) == 0) : ?>
                   <p>登録されていません</p>
                 <?php endif?>
-=======
-								<?php foreach($userhobby as $hobby) :?>
-								<input type="radio">
-								<?php echo "$hobby"?>
-								<?php endforeach?>
-								<?php if(sizeof($userhobby) == 0) : ?>
-								<p>登録されていません</p>
-								<?php endif?>
->>>>>>> 4a0742a4b57e0f842c67a14bfd04e604ab14c35a
 							</dd>
 							<dt>〇〇さんの趣味</dt>
 							<dd>
 								<!--viewerに登録された人の趣味情報を選択できるようにする-->
-<<<<<<< HEAD
                 <?php foreach($targethobby as $hobby) :?>
                   <input type="radio" class="radio2" name="radio2" value=<?php echo $hobby?> onclick="selcheck2()"><?php echo $hobby?>
                 <?php endforeach?>
                 <?php if(sizeof($targethobby) == 0) : ?>
                   <p>登録されていません</p>
                 <?php endif?>
-=======
-								<?php foreach($targethobby as $hobby) :?>
-								<input type="radio">
-								<?php echo "$hobby"?>
-								<?php endforeach?>
-								<?php if(sizeof($targethobby) == 0) : ?>
-								<p>登録されていません</p>
-								<?php endif?>
->>>>>>> 4a0742a4b57e0f842c67a14bfd04e604ab14c35a
 							</dd>
 						</dl>
 					</form>

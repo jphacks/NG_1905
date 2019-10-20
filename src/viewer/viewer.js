@@ -27,7 +27,12 @@ function selcheck2() {
   //formのアドレスを参照
   elementReference = document.getElementById("f");
   sIndex = elementReference.radio2;
-  val = sIndex.value;
+  val = "";
+  for(i = 0; i < sIndex.length; i++){
+    if(sIndex[i].checked){
+      val = sIndex[i].value;
+    }
+  }
   if( val == ""){
     document.getElementById( "q" ).value += "";
   }
