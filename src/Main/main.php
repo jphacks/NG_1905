@@ -28,7 +28,7 @@
     ?>
 
 <div class="hello">
-    <h3>ようこそ<?php echo $username ?>さん,ID=<?php echo $userid ?></h3>
+    <h3>ようこそ <?php echo $username ?>さん</h3>
 
 </div>
 
